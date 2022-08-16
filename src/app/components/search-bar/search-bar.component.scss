@@ -1,0 +1,89 @@
+@use '../../../styles' as styles;
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 2.75em;
+  padding: 0 0.5em;
+  border: 1px solid styles.$light-grey;
+  border-radius: 3em;
+  box-shadow: 0px 1px 5px styles.$light-grey;
+
+  &__fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.75em;
+    align-items: center;
+    width: 90%;
+    height: 75%;
+    border-radius: 3em;
+    border: 0.1px solid transparent;
+
+    &:focus-within {
+      border: 0.1px solid styles.$light-grey;
+      background-color: styles.$light-grey;
+    }
+  }
+
+  &__field {
+    height: 100%;
+    width: 100%;
+    border-radius: 3em;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5em;
+
+    &:focus-within {
+      background-color: white;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  &__divider {
+    height: 75%;
+    border-left: 1px solid styles.$light-grey;
+  }
+
+  &__button {
+    width: 2em;
+    height: 2em;
+    border-radius: 3em;
+    background-color: styles.$blue;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.button {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+
+  &__icon {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .search-bar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .search-bar {
+    width: 35em;
+  }
+}
