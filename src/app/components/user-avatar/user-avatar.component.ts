@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faBars, faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faCircleUser } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-user-avatar',
@@ -9,7 +10,7 @@ import { faBars, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 export class UserAvatarComponent implements OnInit {
   // Icons
   faCircleUser = faCircleUser
-  faBars = faBars
+  faCaretDown = faCaretDown
 
   constructor () { }
 

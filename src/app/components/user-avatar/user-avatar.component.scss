@@ -6,4 +6,15 @@
   gap: 1em;
   align-items: center;
   justify-content: space-between;
+
+  &__menu {
+    cursor: pointer;
+    color: styles.$blue;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .user-avatar__profile {
+    display: none;
+  }
 }
