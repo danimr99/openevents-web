@@ -12,7 +12,7 @@ import { UserAvatarComponent } from './user-avatar/user-avatar.component';
   declarations: [
     NavBarComponent,
     SearchBarComponent,
-    UserAvatarComponent
+    UserAvatarComponent,
   ],
   imports: [
     CommonModule,

@@ -1,9 +1,7 @@
 @use '../../../styles' as styles;
+@use '@angular/material' as mat;
 
 .user-avatar {
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
   align-items: center;
   justify-content: space-between;
 
@@ -13,8 +11,39 @@
   }
 }
 
-@media screen and (max-width: 575.98px) {
-  .user-avatar__profile {
-    display: none;
+::ng-deep .menu__content {
+  .content__item {
+    &--profile {
+      display: flex;
+      flex-direction: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8em;
+    }
+
+    &--logout {
+      color: red !important;
+
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.1) !important;
+      }
+
+      &:focus {
+        background-color: rgba(255, 0, 0, 0.2) !important;
+      }
+    }
+  }
+
+  .profile__image {
+    width: 2em;
+    height: 2em;
+    object-fit: cover;
+    clip-path: circle();
+  }
+
+  .item__icon {
+    &--logout {
+      color: red !important;
+    }
   }
 }

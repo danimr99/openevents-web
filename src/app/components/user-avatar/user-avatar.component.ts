@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faCaretDown, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -8,9 +7,10 @@ import { faCaretDown, faCircleUser } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./user-avatar.component.scss']
 })
 export class UserAvatarComponent implements OnInit {
-  // Icons
-  faCircleUser = faCircleUser
-  faCaretDown = faCaretDown
+  // Default user avatar image
+  //DEFAULT_USER_AVATAR_IMAGE: string = '../../../assets/images/default_user.png'
+  DEFAULT_USER_AVATAR_IMAGE: string = 'https://images.pexels.com/photos/9198359/pexels-photo-9198359.jpeg'
+  isUserLoggedIn: boolean = true
 
   constructor () { }
 

@@ -1,8 +1,39 @@
 <div class="user-avatar">
-  <button class="user-avatar__menu" mat-icon-button aria-label="Dropdown menu icon">
-    <mat-icon class="menu__icon">arrow_drop_down</mat-icon>
-  </button>
-  <div class="user-avatar__profile">
-    <fa-icon class="profile__icon" [icon]="faCircleUser" [size]="'3x'"></fa-icon>
+  <div *ngIf="isUserLoggedIn; else loggedOut" class="user-avatar__menu">
+    <button class="menu__button" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Dropdown menu button">
+      <mat-icon class="button__icon">more_vert</mat-icon>
+    </button>
+    <mat-menu class="menu__content" #menu="matMenu">
+      <button class="content__item--profile" mat-menu-item>
+        <img class="profile__image" src={{DEFAULT_USER_AVATAR_IMAGE}} alt="User profile image">
+        <span>My profile</span>
+      </button>
+      <button class="content__item" mat-menu-item [matMenuTriggerFor]="events">
+        <mat-icon>calendar_month</mat-icon>
+        <span>Events</span>
+      </button>
+      <button class="content__item--logout" mat-menu-item>
+        <mat-icon class="item__icon--logout">logout</mat-icon>
+        <span>Log out</span>
+      </button>
+    </mat-menu>
+    <mat-menu class="menu__content" #events="matMenu">
+      <button class="content__item" mat-menu-item>
+        <mat-icon class="item__icon">event_note</mat-icon>
+        <span>Host an event</span>
+      </button>
+      <button class="content__item" mat-menu-item>
+        <mat-icon>event</mat-icon>
+        <span>My events</span>
+      </button>
+      <button class="content__item" mat-menu-item>
+        <mat-icon class="item__icon">emoji_people</mat-icon>
+        <span>Joined events</span>
+      </button>
+    </mat-menu>
   </div>
 </div>
+
+<ng-template #loggedOut>
+  <button mat-stroked-button color="primary">Log in</button>
+</ng-template>
