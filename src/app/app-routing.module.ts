@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { AuthenticationPageComponent } from './pages/authentication-page/authentication-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 
@@ -18,7 +19,11 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: AuthenticationPageComponent
+    component: LoginPageComponent
+  },
+  {
+    path: 'register',
+    component: RegisterPageComponent
   },
   {
     path: '**',

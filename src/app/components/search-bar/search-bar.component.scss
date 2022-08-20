@@ -63,16 +63,16 @@
     background-color: styles.$blue;
     justify-content: center;
     align-items: center;
-  }
-}
 
-.button {
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
+    .button {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
 
-  &__icon {
-    color: white;
+      &__icon {
+        color: white;
+      }
+    }
   }
 }
 

@@ -1,8 +1,12 @@
 <div class="user-avatar">
   <div *ngIf="isUserLoggedIn; else loggedOut" class="user-avatar__menu">
+
+    <!-- Dropdown button -->
     <button class="menu__button" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Dropdown menu button">
       <mat-icon class="button__icon">more_vert</mat-icon>
     </button>
+
+    <!-- Dropdown menu -->
     <mat-menu class="menu__content" #menu="matMenu">
       <button class="content__item--profile" mat-menu-item>
         <img class="profile__image" src={{DEFAULT_USER_AVATAR_IMAGE}} alt="User profile image">
@@ -17,6 +21,8 @@
         <span>Log out</span>
       </button>
     </mat-menu>
+
+    <!-- Events dropdown submenu -->
     <mat-menu class="menu__content" #events="matMenu">
       <button class="content__item" mat-menu-item>
         <mat-icon class="item__icon">event_note</mat-icon>
@@ -31,9 +37,11 @@
         <span>Joined events</span>
       </button>
     </mat-menu>
+
   </div>
 </div>
 
+<!-- Login button -->
 <ng-template #loggedOut>
   <button mat-stroked-button color="primary">Log in</button>
 </ng-template>

@@ -3,14 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { ComponentsModule } from '../components/components.module';
 
-import { AuthenticationPageComponent } from './authentication-page/authentication-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 
 @NgModule({
   declarations: [
-    AuthenticationPageComponent,
+    LoginPageComponent,
+    RegisterPageComponent,
     HomePageComponent,
     NotFoundPageComponent
   ],
@@ -19,7 +21,8 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     ComponentsModule
   ],
   exports: [
-    AuthenticationPageComponent,
+    LoginPageComponent,
+    RegisterPageComponent,
     HomePageComponent,
     NotFoundPageComponent
   ]

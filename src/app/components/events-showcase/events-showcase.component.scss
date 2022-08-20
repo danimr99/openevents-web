@@ -1,0 +1,43 @@
+@use '../../../styles' as styles;
+
+.container {
+  margin: 2em 5em;
+
+  &__header {
+    display: flex;
+    flex-direction: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+
+    h1 {
+      margin: auto 0;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .header__filters {
+      display: flex;
+      flex-direction: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2em;
+
+      .filters__button {
+        display: flex;
+        flex-direction: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1em;
+        font-weight: bold;
+
+        .button__icon {
+          margin-right: 0.25em;
+        }
+      }
+    }
+  }
+
+  &__body {}
+
+}
