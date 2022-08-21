@@ -1,13 +1,19 @@
 <form class="form" [formGroup]="loginForm">
+
+  <!-- Email input -->
   <mat-form-field appearance="outline">
     <mat-label>Email</mat-label>
     <input matInput type="email" placeholder="Email" formControlName="email">
     <mat-icon matSuffix>email</mat-icon>
   </mat-form-field>
+
+  <!-- Password input -->
   <mat-form-field appearance="outline">
     <mat-label>Password</mat-label>
     <input matInput [type]="hidePassword ? 'password' : 'text'" placeholder="Password" formControlName="password">
     <mat-icon matSuffix (click)="togglePasswordVisibility()">password</mat-icon>
   </mat-form-field>
+
+  <!-- Sign in button -->
   <button class="form__button" mat-raised-button color="primary">Sign in</button>
 </form>

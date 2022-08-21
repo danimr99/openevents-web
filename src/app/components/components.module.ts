@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../modules/material/material.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -21,6 +22,7 @@ import { LoginFormComponent } from './forms/login-form/login-form.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     FontAwesomeModule,
     MaterialModule,
     FormsModule,

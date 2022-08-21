@@ -11,17 +11,30 @@
 
     <!-- Login form -->
     <div class="login__body">
+      <!-- Login title -->
       <h1 class="body__title">Sign In</h1>
 
+      <!-- Login form -->
       <app-login-form></app-login-form>
     </div>
 
+    <!-- Login extra action -->
+    <span class="login__action">Don't have an account?
+      <span class="action__link">
+        <a routerLink="/register">Sign up</a>
+      </span>
+    </span>
   </div>
 
   <!-- Right side -->
   <div class="container__decoration">
     <img class="decoration__background" src="../../../assets/images/auth_background.jpg"
       alt="Authentication background">
+    <div class="decoration__action">
+      <h1 class="action__title">Discover events around you</h1>
+      <h2 class="action__subtitle">Register and start a journey with us</h2>
+      <button class="action__button" mat-raised-button color="primary" routerLink="/register">Sign up</button>
+    </div>
   </div>
 
 </section>

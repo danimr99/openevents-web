@@ -46,9 +46,21 @@
         font-weight: bold;
       }
     }
+
+    .login__action {
+      display: none;
+      width: 100%;
+      margin-top: 5em;
+
+      .action__link {
+        font-weight: bold;
+        color: styles.$blue;
+      }
+    }
   }
 
   &__decoration {
+    position: relative;
     width: 40%;
     height: 100%;
 
@@ -56,6 +68,32 @@
       width: auto;
       height: 100%;
       object-fit: cover;
+    }
+
+    .decoration__action {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      .action__title {
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        color: styles.$blue;
+      }
+
+      .action__subtitle {
+        text-align: center;
+        font-size: 1em;
+        color: white;
+      }
+
+      .action__button {
+        margin: 0 auto;
+        margin-top: 2.5em;
+      }
     }
   }
 }
@@ -68,6 +106,14 @@
 
       .login__body {
         width: 80%;
+      }
+
+      .login__action {
+        display: flex;
+        flex: row nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.1em;
       }
     }
 
@@ -85,6 +131,14 @@
 
       .login__body {
         width: 70%;
+      }
+
+      .login__action {
+        display: flex;
+        flex: row nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
       }
     }
 
